@@ -5,6 +5,8 @@ const db = require("./index");
 
 db.connect(function (err) {
   if (err) throw err;
-  console.log("HELLO! WELCOME TO EMPLOYEE MANAGER");
+  console.log("**************************************");
+  console.log("* HELLO! WELCOME TO EMPLOYEE MANAGER *");
+  console.log("**************************************");
 });
 
