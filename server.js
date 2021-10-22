@@ -1,7 +1,10 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const consoleTable = require("console.table");
-const express = require("express");
+const db = require("./index");
 
-const app = express();
+db.connect(function (err) {
+  if (err) throw err;
+  console.log("HELLO! WELCOME TO EMPLOYEE MANAGER");
+});
 
