@@ -1,12 +1,17 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const consoleTable = require("console.table");
-const db = require("./index");
+const confirm = require("inquirer-confirm");
+const PORT = process.env.PORT || 3001;
 
-db.connect(function (err) {
-  if (err) throw err;
-  console.log("**************************************");
-  console.log("* HELLO! WELCOME TO EMPLOYEE MANAGER *");
-  console.log("**************************************");
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: `634Grand`,
+  database: "employees_db",
 });
 
+console.log("**************************************");
+console.log("* HELLO! WELCOME TO EMPLOYEE MANAGER *");
+console.log("**************************************");
+db.connect();
