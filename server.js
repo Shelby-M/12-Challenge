@@ -138,32 +138,9 @@ function viewAllEmployees() {
 }
 
 // Function to Add Department
-function addedNewDepartment() {
-  inquirer
-    .prompt([
-      {
-        type: "input",
-        message: "What is the new department name?",
-        name: "name",
-      },
-    ])
-    .then(function (response) {
-      newDepartment(response);
-    });
-}
+function addedNewDepartment() {}
 
-function newDepartment(data) {
-  db.query(
-    "INSERT INTO departments SET ?",
-    {
-      name: data.name,
-    },
-    function (error, res) {
-      if (error) throw error;
-    }
-  );
-  continueOrEnd();
-}
+function newDepartment(data) {}
 
 // Function to Add Role
 function addRole() {
